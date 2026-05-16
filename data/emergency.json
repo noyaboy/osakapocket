@@ -1,0 +1,158 @@
+{
+  "groups": [
+    {
+      "id": "critical",
+      "title": "真正緊急 — 馬上撥",
+      "emoji": "🚨",
+      "critical": true,
+      "contacts": [
+        {
+          "title": "駐大阪辦事處 急難救助",
+          "subtitle": "限緊急（車禍 / 重病 / 被捕 / 搶劫）",
+          "phone": "+81-90-8794-4568",
+          "phoneDisplay": "090-8794-4568"
+        },
+        {
+          "title": "外交部海外急難（日本境內撥）",
+          "subtitle": "免付費 ・ 諧音「您幫幫我您幫幫我」",
+          "phone": "001-800-0885-0885",
+          "phoneDisplay": "001-800-0885-0885"
+        }
+      ]
+    },
+    {
+      "id": "japan-emergency",
+      "title": "日本緊急電話",
+      "emoji": "🆘",
+      "contacts": [
+        {
+          "title": "119 ・ 救護車 / 消防",
+          "subtitle": "急病、嚴重外傷、火災",
+          "phone": "119",
+          "phoneDisplay": "119"
+        },
+        {
+          "title": "110 ・ 警察",
+          "subtitle": "搶劫、車禍、糾紛、走失",
+          "phone": "110",
+          "phoneDisplay": "110"
+        },
+        {
+          "title": "118 ・ 海上保安",
+          "subtitle": "海上事故（內陸請打 110）",
+          "phone": "118",
+          "phoneDisplay": "118"
+        },
+        {
+          "title": "💡 公共電話小知識",
+          "subtitle": "按紅色按鈕後免費撥緊急電話，不用投幣"
+        }
+      ]
+    },
+    {
+      "id": "osaka-office",
+      "title": "駐大阪台北經濟文化辦事處",
+      "emoji": "🏛",
+      "contacts": [
+        {
+          "title": "一般電話",
+          "subtitle": "領務、護照補發、諮詢",
+          "phone": "+81-6-6227-8623",
+          "phoneDisplay": "06-6227-8623"
+        },
+        {
+          "title": "急難救助專線",
+          "subtitle": "限緊急、24h",
+          "phone": "+81-90-8794-4568",
+          "phoneDisplay": "090-8794-4568"
+        },
+        {
+          "title": "📍 地址",
+          "subtitle": "大阪市北区中之島 2-3-18 中之島フェスティバルタワー 17F & 19F",
+          "map": "中之島フェスティバルタワー 大阪市北区中之島 2-3-18"
+        },
+        {
+          "title": "🕐 領務時間",
+          "subtitle": "週一-週五 09:00–11:00 / 13:00–14:30 (週六日及日本國定假日休)"
+        },
+        {
+          "title": "✉ Email",
+          "subtitle": "teco-osa@mofa.gov.tw",
+          "email": "teco-osa@mofa.gov.tw"
+        },
+        {
+          "title": "🌐 官網",
+          "subtitle": "roc-taiwan.org/jposa",
+          "url": "https://www.roc-taiwan.org/jposa/"
+        }
+      ]
+    },
+    {
+      "id": "taiwan-mofa",
+      "title": "台灣外交部",
+      "emoji": "📞",
+      "contacts": [
+        {
+          "title": "緊急聯絡中心（24h 國內免付費）",
+          "subtitle": "家人代撥用",
+          "phone": "0800-085-095",
+          "phoneDisplay": "0800-085-095"
+        },
+        {
+          "title": "緊急聯絡中心（國際撥回）",
+          "subtitle": "在日本撥回台灣",
+          "phone": "+886-3-3982629",
+          "phoneDisplay": "+886-3-3982629"
+        }
+      ]
+    },
+    {
+      "id": "hospitals",
+      "title": "會中文 / 24h 醫院",
+      "emoji": "🏥",
+      "contacts": [
+        {
+          "title": "大阪市立總合醫療中心 (24h 急診)",
+          "subtitle": "急性疾病、外傷",
+          "phone": "+81-6-6929-1221",
+          "phoneDisplay": "06-6929-1221",
+          "map": "大阪市立総合医療センター"
+        },
+        {
+          "title": "大阪回生病院（新大阪駅旁）",
+          "subtitle": "一般門診、健檢、靠近新大阪 JR",
+          "phone": "+81-6-6393-6234",
+          "phoneDisplay": "06-6393-6234",
+          "map": "大阪回生病院 大阪市淀川区宮原 1-6-10"
+        },
+        {
+          "title": "💡 出發前提醒",
+          "subtitle": "向駐大阪辦事處 Email 索取最新「旅外國人實用資訊手冊」，內含完整醫療資源清單"
+        }
+      ]
+    },
+    {
+      "id": "lost-items",
+      "title": "東西掉了 / 被偷",
+      "emoji": "🔎",
+      "contacts": [
+        {
+          "title": "1. 護照 / 簽證遺失",
+          "subtitle": "立即聯絡駐大阪辦事處（急難救助 090-8794-4568）→ 補辦臨時護照"
+        },
+        {
+          "title": "2. 信用卡遺失",
+          "subtitle": "在卡夾頁存好的掛失專線；國際漫遊或飯店電話撥回台灣銀行"
+        },
+        {
+          "title": "3. iPhone 遺失",
+          "subtitle": "用同行者 iPhone 開啟「尋找」→ 鎖機 / 抹除。出發前先設好兩人位置共享"
+        },
+        {
+          "title": "4. 行李遺失",
+          "subtitle": "立即在機場行李櫃台 (Lost & Found) 報案 → 保留 Tag 號碼 → 聯絡旅平險公司"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5" />
+  <title>OsakaPocket — 大阪旅遊隨身夾</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#ff6b6b" />
+
+  <!-- iOS PWA -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="OsakaPocket" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="icon" href="icons/icon-192.png" type="image/png" />
+
+  <link rel="stylesheet" href="vendor/leaflet.css" />
+  <link rel="stylesheet" href="vendor/MarkerCluster.css" />
+  <link rel="stylesheet" href="vendor/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="styles.css?v=16" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <span class="logo">🐙 OsakaPocket</span>
+      <span class="topbar-sub" id="topbar-sub"></span>
+    </div>
+  </header>
+
+  <main id="app" class="page-wrap">
+    <!-- 頁面在 app.js 中渲染 -->
+  </main>
+
+  <nav class="tabbar" role="navigation">
+    <button class="tab" data-page="home"><span class="tab-icon">🏠</span><span>首頁</span></button>
+    <button class="tab" data-page="itinerary"><span class="tab-icon">📅</span><span>行程</span></button>
+    <button class="tab" data-page="spots"><span class="tab-icon">📍</span><span>景點</span></button>
+    <button class="tab" data-page="cards"><span class="tab-icon">🪪</span><span>卡夾</span></button>
+    <button class="tab" data-page="more"><span class="tab-icon">⋯</span><span>更多</span></button>
+  </nav>
+
+  <div id="modal-root"></div>
+
+  <script src="vendor/leaflet.js"></script>
+  <script src="vendor/leaflet.markercluster.js"></script>
+  <script src="vendor/Sortable.min.js"></script>
+  <script src="app.js?v=16" type="module"></script>
+</body>
+</html>

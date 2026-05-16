@@ -1,0 +1,201 @@
+{
+  "categories": [
+    { "id": "all",     "label": "全部" },
+    { "id": "osaka",   "label": "大阪名物" },
+    { "id": "ramen",   "label": "拉麵" },
+    { "id": "seafood", "label": "海鮮 / 串燒" },
+    { "id": "sweet",   "label": "甜點" },
+    { "id": "chain",   "label": "便利商店 / 連鎖" }
+  ],
+  "foods": [
+    {
+      "id": "takoyaki",
+      "name": "章魚燒",
+      "nameJp": "たこ焼き",
+      "category": "osaka",
+      "price": "¥500-700 / 8 顆",
+      "where": "道頓堀「たこ家道頓堀くくる」、「大たこ」、「会津屋」",
+      "tip": "大阪本命。剛起鍋燙嘴小心吃，醬汁柴魚必加。「会津屋」走元祖路線無醬汁、純高湯。"
+    },
+    {
+      "id": "okonomiyaki",
+      "name": "大阪燒",
+      "nameJp": "お好み焼き",
+      "category": "osaka",
+      "price": "¥1,000-1,500",
+      "where": "道頓堀「ぼてぢゅう」、「美津の」、難波「千房」",
+      "tip": "鐵板現做、自己加美乃滋柴魚。配啤酒一絕。"
+    },
+    {
+      "id": "kushikatsu",
+      "name": "串炸",
+      "nameJp": "串カツ",
+      "category": "osaka",
+      "price": "¥80-200 / 串",
+      "where": "新世界「だるま 元祖串かつ」、通天閣周邊",
+      "tip": "⚠ 「醬汁不可二沾」是規矩，沾過一次咬完再用蓬蓬蓮葉舀。"
+    },
+    {
+      "id": "horumon",
+      "name": "燒肉 / 內臟燒",
+      "nameJp": "焼肉 / ホルモン",
+      "category": "osaka",
+      "price": "¥3,000-5,000 / 人",
+      "where": "鶴橋「白雲台」、「空 BAR」",
+      "tip": "大阪鶴橋是燒肉一條街。內臟燒大阪人愛。"
+    },
+    {
+      "id": "551",
+      "name": "551 蓬萊豬肉包",
+      "nameJp": "551 蓬莱の豚まん",
+      "category": "osaka",
+      "price": "¥220 / 顆",
+      "where": "大阪車站、難波各分店、機場分店",
+      "tip": "大阪人離開大阪時都會帶回去的伴手禮。剛蒸好最威。"
+    },
+    {
+      "id": "ichiran",
+      "name": "一蘭拉麵",
+      "nameJp": "一蘭",
+      "category": "ramen",
+      "price": "¥1,000-1,500",
+      "where": "道頓堀店（24h）、心齋橋店",
+      "tip": "個人座位、無干擾。台灣有，但大阪總店體驗不同。"
+    },
+    {
+      "id": "kinryu",
+      "name": "金龍拉麵",
+      "nameJp": "金龍ラーメン",
+      "category": "ramen",
+      "price": "¥800-900",
+      "where": "道頓堀（24h，巨大金龍招牌）",
+      "tip": "宵夜神店。泡菜、韮菜免費吃到飽。"
+    },
+    {
+      "id": "jiyuken",
+      "name": "自由軒名物咖哩",
+      "nameJp": "自由軒 名物カレー",
+      "category": "osaka",
+      "price": "¥800",
+      "where": "難波「自由軒 本店」（百年老店）",
+      "tip": "生雞蛋拌咖哩飯，吃法很特別。"
+    },
+    {
+      "id": "polestar",
+      "name": "北極星 蛋包飯",
+      "nameJp": "北極星 オムライス",
+      "category": "osaka",
+      "price": "¥1,000-1,400",
+      "where": "心齋橋「北極星 心斎橋本店」（老房舍、日式庭院）",
+      "tip": "據說是日本蛋包飯發祥地。"
+    },
+    {
+      "id": "kuromon-uni",
+      "name": "黑門市場 海膽 / 鮪魚",
+      "nameJp": "黒門市場 ウニ / マグロ",
+      "category": "seafood",
+      "price": "¥500-2,000 / 份",
+      "where": "黑門市場各攤",
+      "tip": "現切現吃。觀光客價格略高但品質好。"
+    },
+    {
+      "id": "kanidoraku",
+      "name": "蟹道樂 螃蟹大餐",
+      "nameJp": "かに道楽",
+      "category": "seafood",
+      "price": "¥5,000-15,000 / 人",
+      "where": "道頓堀「かに道楽 道頓堀本店」（巨大螃蟹招牌）",
+      "tip": "貴但值得體驗一次。最好線上預約。"
+    },
+    {
+      "id": "fugu",
+      "name": "河豚料理",
+      "nameJp": "ふぐ",
+      "category": "seafood",
+      "price": "¥5,000-20,000 / 人",
+      "where": "「づぼらや」（已閉、找其他名店）、「太政」",
+      "tip": "刺身、火鍋、酒燒一條龍。8 月不是河豚季（旬 10-3 月），可考慮其他料理。"
+    },
+    {
+      "id": "kobe-beef",
+      "name": "神戶牛 / 和牛",
+      "nameJp": "神戸牛 / 和牛",
+      "category": "seafood",
+      "price": "¥6,000-20,000 / 人",
+      "where": "「モーリヤ」、「ステーキランド神戸館」",
+      "tip": "去神戶當日來回最划算（比大阪市區便宜）。"
+    },
+    {
+      "id": "pablo",
+      "name": "PABLO 半熟起司塔",
+      "nameJp": "PABLO チーズタルト",
+      "category": "sweet",
+      "price": "¥800",
+      "where": "心齋橋本店",
+      "tip": "現烤可外帶。整顆塔不分切。"
+    },
+    {
+      "id": "rikuro",
+      "name": "Rikuro 半熟起司蛋糕",
+      "nameJp": "りくろーおじさんのチーズケーキ",
+      "category": "sweet",
+      "price": "¥865",
+      "where": "難波「りくろーおじさん 難波本店」",
+      "tip": "現烤蛋糕會搖晃像果凍。輕盈不甜膩。排隊神店。"
+    },
+    {
+      "id": "matcha",
+      "name": "京都抹茶聖代",
+      "nameJp": "抹茶パフェ",
+      "category": "sweet",
+      "price": "¥1,200-1,800",
+      "where": "京都「中村藤吉」、「伊藤久右衛門」",
+      "tip": "去京都那天吃。配抹茶蕨餅完美。"
+    },
+    {
+      "id": "matsuko",
+      "name": "黑糖蕨餅 (warabi mochi)",
+      "nameJp": "わらび餅",
+      "category": "sweet",
+      "price": "¥500-1,000",
+      "where": "京都老店、心齋橋甜品店",
+      "tip": "彈牙黑糖香、夏天必吃。"
+    },
+    {
+      "id": "konbini",
+      "name": "便利商店宵夜套餐",
+      "nameJp": "コンビニ",
+      "category": "chain",
+      "price": "¥500-1,000",
+      "where": "7-11、Family Mart、Lawson",
+      "tip": "炸雞 / 飯糰 / 鮭魚便當 / 布丁 / 限定零食。日本便利商店是寶藏。"
+    },
+    {
+      "id": "yoshinoya",
+      "name": "吉野家 / すき家 牛丼",
+      "nameJp": "牛丼",
+      "category": "chain",
+      "price": "¥400-600",
+      "where": "全市分店",
+      "tip": "省錢一餐解決。比台灣分店便宜。"
+    },
+    {
+      "id": "mos",
+      "name": "MOS Burger 日本限定",
+      "nameJp": "モスバーガー",
+      "category": "chain",
+      "price": "¥500-900",
+      "where": "全市分店",
+      "tip": "限定口味（米漢堡）、跟台灣不一樣。"
+    },
+    {
+      "id": "cocoichi",
+      "name": "CoCo 壱番屋 咖哩",
+      "nameJp": "CoCo壱番屋 (ココイチ)",
+      "category": "chain",
+      "price": "¥800-1,200",
+      "where": "全市分店",
+      "tip": "可調整辣度與配料。是日本國民咖哩飯。"
+    }
+  ]
+}

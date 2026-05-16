@@ -1,0 +1,549 @@
+{
+  "categories": [
+    { "id": "docs",      "label": "證件文件",  "emoji": "📄" },
+    { "id": "gov",       "label": "政府申請",  "emoji": "🏛" },
+    { "id": "entry",     "label": "日本入境",  "emoji": "🇯🇵" },
+    { "id": "money",     "label": "金錢規劃",  "emoji": "💴" },
+    { "id": "comm",      "label": "通訊網路",  "emoji": "📱" },
+    { "id": "insurance", "label": "旅遊保險",  "emoji": "🛡️" },
+    { "id": "health",    "label": "健康準備",  "emoji": "💊" },
+    { "id": "luggage",   "label": "行李打包",  "emoji": "🎒" },
+    { "id": "emergency", "label": "緊急聯絡",  "emoji": "🆘" },
+    { "id": "apps",      "label": "App 工具",  "emoji": "📲" }
+  ],
+  "tasks": [
+    {
+      "id": "passport-expiry",
+      "category": "docs",
+      "title": "檢查護照效期 ≥ 6 個月",
+      "detail": "8/17 回國 → 護照效期應到 2027/2/17 以後。不符合就申請速件處理（+NT$300，快 1 個工作日）。",
+      "priority": "must", "scope": "both", "weeksAhead": 12,
+      "link": "https://www.boca.gov.tw/cp-56-3012-9e168-1.html", "linkLabel": "外交部領事事務局"
+    },
+    {
+      "id": "passport-sign",
+      "category": "docs",
+      "title": "護照本人簽名欄已簽",
+      "detail": "中文或英文皆可，未簽屬無效護照。",
+      "priority": "must", "scope": "both", "weeksAhead": 12
+    },
+    {
+      "id": "passport-copies",
+      "category": "docs",
+      "title": "護照影本 2 份 + 大頭照 2 張",
+      "detail": "分別放在託運行李和隨身包，遺失補發用。大頭照規格 4.5×3.5 cm 白底。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 2
+    },
+    {
+      "id": "passport-photo-icloud",
+      "category": "docs",
+      "title": "護照資料頁拍照存 iCloud",
+      "detail": "網路掛失與駐外館聯繫都會用到。在卡夾頁也可上傳一份。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 2
+    },
+    {
+      "id": "driver-jp",
+      "category": "docs",
+      "title": "駕照日文譯本（如需租車）",
+      "detail": "純大阪市區用地鐵不需要。若要到郊區（淡路島、和歌山）租車，到任一監理所辦理，NT$100。免辦 IDP 國際駕照。",
+      "priority": "optional", "scope": "both", "weeksAhead": 4,
+      "link": "https://tpcmv.thb.gov.tw/cp.aspx?n=9457", "linkLabel": "監理所"
+    },
+
+    {
+      "id": "military-permit",
+      "category": "gov",
+      "title": "申請役男短期出境核准（線上）",
+      "detail": "出國前 1 個月內送件（建議 7/11–8/4 之間）。19–36 歲未役男必辦。3–5 個工作日核准。每次最長 4 個月，本次 7 天遠低於上限。",
+      "priority": "must", "scope": "male", "weeksAhead": 4,
+      "link": "https://www.ris.gov.tw/departure/", "linkLabel": "役政署線上系統"
+    },
+    {
+      "id": "military-print",
+      "category": "gov",
+      "title": "列印核准通知單紙本 2 份",
+      "detail": "海關 100% 抽查，光手機螢幕不夠。一份夾護照、一份備用。",
+      "priority": "must", "scope": "male", "weeksAhead": 1,
+      "link": "https://www.ris.gov.tw/military-abroadStudy/", "linkLabel": "通知單查詢列印"
+    },
+    {
+      "id": "military-screenshot",
+      "category": "gov",
+      "title": "截圖核准畫面存手機",
+      "detail": "紙本遺失時可出示。卡夾頁的「役男核准」section 也可上傳 PDF 備份。",
+      "priority": "recommended", "scope": "male", "weeksAhead": 1
+    },
+    {
+      "id": "boca-register",
+      "category": "gov",
+      "title": "外交部「出國登錄」",
+      "detail": "若發生天災 / 政變，外交部會主動聯繫家屬。上「旅外救助指南 App」或 BOCA 網站登錄行程。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 2,
+      "link": "https://www.boca.gov.tw/cp-87-2121-7a5da-1.html", "linkLabel": "旅外救助指南"
+    },
+
+    {
+      "id": "vjw-fill",
+      "category": "entry",
+      "title": "Visit Japan Web 雙 QR（出發前 6 小時內）",
+      "detail": "一次填好護照、航班、住宿、海關。產生入境 QR + 海關申報 QR。情侶兩人各自一個帳號，主帳號可加同行者資料。走 VJW 自助 KIOSK 省 30-60 分鐘排隊。",
+      "priority": "must", "scope": "both", "weeksAhead": 0,
+      "link": "https://www.vjw.digital.go.jp/", "linkLabel": "Visit Japan Web"
+    },
+    {
+      "id": "vjw-paper-backup",
+      "category": "entry",
+      "title": "索取紙本入境卡 + 海關申報單備援",
+      "detail": "機上空服員會發。VJW 故障時備用。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 0
+    },
+    {
+      "id": "return-ticket",
+      "category": "entry",
+      "title": "回程機票電子檔可離線秀",
+      "detail": "日本海關偶會要求出示離境證明。卡夾頁可上傳。",
+      "priority": "must", "scope": "both", "weeksAhead": 1
+    },
+    {
+      "id": "hotel-jp-address",
+      "category": "entry",
+      "title": "飯店日文地址填進 VJW",
+      "detail": "Airbnb 也可填，但需可驗證。",
+      "priority": "must", "scope": "both", "weeksAhead": 1
+    },
+    {
+      "id": "prohibited-items",
+      "category": "entry",
+      "title": "確認沒帶禁帶物品",
+      "detail": "肉類製品（含香腸、肉鬆、肉乾、含肉的泡麵調味包）全面禁止。新鮮蔬果、植物苗木禁止。現金 > 100 萬日圓等值需申報。",
+      "priority": "must", "scope": "both", "weeksAhead": 0
+    },
+
+    {
+      "id": "estimate-cash",
+      "category": "money",
+      "title": "估算現金預算：兩人 ¥70,000–115,000",
+      "detail": "餐 ¥3-5k/人/日 × 7 = ¥42-70k；交通 ¥1.5k/人/日 = ¥21k；USJ+京都+奈良門票 ¥24k；雜支 ¥20k。建議帶 ¥30-50k 現金，其餘可在當地 ATM 補。",
+      "priority": "must", "scope": "both", "weeksAhead": 4
+    },
+    {
+      "id": "exchange-twn",
+      "category": "money",
+      "title": "在台灣換匯 70%（台銀 / 兆豐線上）",
+      "detail": "匯率最佳，差價約 0.1–0.3。桃機現場銀行差價 0.5–0.8。關西機場最差，避免。",
+      "priority": "must", "scope": "both", "weeksAhead": 2
+    },
+    {
+      "id": "atm-overseas",
+      "category": "money",
+      "title": "開通金融卡海外提款",
+      "detail": "日本 7-11 內 Seven Bank ATM 接受 VISA/Plus/Master/Cirrus/JCB/銀聯。出發前到原銀行開通海外提款功能 + 4 位數密碼。每筆台灣端手續費 NT$70-100。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 4,
+      "link": "https://www.sevenbank.co.jp/intlcard/index2.html", "linkLabel": "Seven Bank ATM"
+    },
+    {
+      "id": "icoca-mobile",
+      "category": "money",
+      "title": "iPhone 錢包加 ICOCA 交通卡",
+      "detail": "情侶各加一張到 Apple Wallet，無需實體卡。地鐵、JR、便利商店都能刷。可用 Apple Pay 儲值。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 1
+    },
+
+    {
+      "id": "esim-buy",
+      "category": "comm",
+      "title": "買日本 eSIM",
+      "detail": "推薦 Airalo（5GB US$8、走 SoftBank）或 Klook eSIM（常促銷、中文客服）。Holafly 無限流量 US$30/7 天，但分享熱點受限。iPhone XS 以上才支援 eSIM。",
+      "priority": "must", "scope": "both", "weeksAhead": 1
+    },
+    {
+      "id": "esim-install",
+      "category": "comm",
+      "title": "出發前 1-3 天安裝 eSIM（先裝不啟用）",
+      "detail": "在台灣家中：掃 QR → 加入行動方案 → 標籤命名為「日本」→ 不啟用。抵達關西機場後在飛航模式下切換。",
+      "priority": "must", "scope": "both", "weeksAhead": 1
+    },
+    {
+      "id": "close-roaming",
+      "category": "comm",
+      "title": "關閉台灣 SIM 漫遊（出發當天）",
+      "detail": "設定 → 行動服務 → 台灣 SIM → 關閉漫遊。保留簡訊收驗證碼。",
+      "priority": "must", "scope": "both", "weeksAhead": 0
+    },
+    {
+      "id": "find-my",
+      "category": "comm",
+      "title": "兩人加入 Apple「尋找」位置共享",
+      "detail": "人潮中走失救命。設定 → 你的 Apple ID → 尋找 → 與他人分享位置。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 1
+    },
+    {
+      "id": "line-test",
+      "category": "comm",
+      "title": "LINE 雙方好友通訊測試",
+      "detail": "日本飯店、訂位常用 LINE 聯絡。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 2
+    },
+
+    {
+      "id": "buy-travel-insurance",
+      "category": "insurance",
+      "title": "買海外旅平險（必含醫療！）",
+      "detail": "信用卡附贈多僅含意外身故，不含海外醫療。日本急診住院一晚動輒 ¥10-50 萬。建議：意外 NT$1500 萬、突發疾病醫療 NT$150-300 萬、班機延誤、緊急救援 NT$300 萬。7 天兩人約 NT$3-4k。",
+      "priority": "must", "scope": "both", "weeksAhead": 4
+    },
+    {
+      "id": "save-policy",
+      "category": "insurance",
+      "title": "保單電子檔存手機 + 卡夾頁",
+      "detail": "在卡夾頁的「旅遊平安險」section 填寫保單號 + 上傳 PDF。",
+      "priority": "must", "scope": "both", "weeksAhead": 2
+    },
+    {
+      "id": "insurance-rescue-contact",
+      "category": "insurance",
+      "title": "保險公司 24h 救援電話設為手機常用聯絡人",
+      "detail": "意外發生時不用翻保單。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 2
+    },
+
+    {
+      "id": "yakkan",
+      "category": "health",
+      "title": "處方藥 MHLW 確認書（如需）",
+      "detail": "若帶處方藥 > 1 個月份、或含管制成分，須上日本厚生勞動省申請「藥品攜帶確認書」。免費但需 4 週送件。OTC 成藥每種限帶 2 個月份。",
+      "priority": "must", "scope": "both", "weeksAhead": 8,
+      "link": "https://www.mhlw.go.jp/", "linkLabel": "厚生勞動省"
+    },
+    {
+      "id": "avoid-illegal-meds",
+      "category": "health",
+      "title": "⚠ 不要帶斯斯感冒膠囊（日本管制毒品）",
+      "detail": "含 Pseudoephedrine（偽麻黃鹼）的台灣常用藥在日本是管制品，誤帶恐被當販毒（最高 10 年徒刑 + ¥3000 萬罰款）。含 Codeine（可待因）的止咳藥也是。出發前在藥局買「成分單純」的普拿疼、表飛鳴。",
+      "priority": "must", "scope": "both", "weeksAhead": 2
+    },
+    {
+      "id": "buy-meds-tw",
+      "category": "health",
+      "title": "在台灣藥局買常備藥",
+      "detail": "普拿疼（止痛）、樂必寧（止瀉）、表飛鳴（整腸）、暈車藥、過敏藥（艾敏釋）、OK 繃 + 優碘。",
+      "priority": "must", "scope": "both", "weeksAhead": 2
+    },
+    {
+      "id": "sunscreen",
+      "category": "health",
+      "title": "防曬 SPF50+ PA++++",
+      "detail": "8 月大阪體感 40°C+，每 2 小時補擦。乳液託運（≤500g）/ 噴霧隨身（每瓶 ≤100ml）。",
+      "priority": "must", "scope": "both", "weeksAhead": 2
+    },
+    {
+      "id": "mosquito",
+      "category": "health",
+      "title": "防蚊液（含 DEET 10-30%）",
+      "detail": "京都奈良戶外特別需要。",
+      "priority": "must", "scope": "both", "weeksAhead": 2
+    },
+    {
+      "id": "electrolyte",
+      "category": "health",
+      "title": "鹽糖錠 / 寶礦力粉",
+      "detail": "預防中暑。便利商店也有賣，但出發備一瓶很重要。",
+      "priority": "must", "scope": "both", "weeksAhead": 2
+    },
+    {
+      "id": "feminine-supplies",
+      "category": "health",
+      "title": "生理用品（如需）",
+      "detail": "日本品牌 Sofy 蘇菲、Laurier 評價優，現地可買。",
+      "priority": "recommended", "scope": "female", "weeksAhead": 2
+    },
+
+    {
+      "id": "clothes",
+      "category": "luggage",
+      "title": "衣物 4-5 套（透氣、速乾、淺色）",
+      "detail": "短袖 / 短褲 / 棉麻長裙、內衣褲 7 套、睡衣。飯店多含洗衣機 ¥200/次。",
+      "priority": "must", "scope": "both", "weeksAhead": 2
+    },
+    {
+      "id": "light-jacket",
+      "category": "luggage",
+      "title": "薄外套 1 件",
+      "detail": "百貨、地鐵、飯店冷氣極強。",
+      "priority": "must", "scope": "both", "weeksAhead": 2
+    },
+    {
+      "id": "shoes",
+      "category": "luggage",
+      "title": "涼鞋 + 好走球鞋（USJ 一天走 15km+）",
+      "detail": "球鞋務必之前穿過，不要新鞋上戰場。",
+      "priority": "must", "scope": "both", "weeksAhead": 2
+    },
+    {
+      "id": "sun-gear",
+      "category": "luggage",
+      "title": "寬帽、太陽眼鏡、陽傘、扇子或迷你風扇",
+      "detail": "陽傘可兼擋陣雨。涼感毛巾很有用。",
+      "priority": "must", "scope": "both", "weeksAhead": 2
+    },
+    {
+      "id": "liquids",
+      "category": "luggage",
+      "title": "隨身液體每瓶 ≤100ml，裝透明夾鏈袋",
+      "detail": "20×20 cm 透明袋，一人一袋。超過全部託運。",
+      "priority": "must", "scope": "both", "weeksAhead": 1
+    },
+    {
+      "id": "powerbank",
+      "category": "luggage",
+      "title": "行動電源隨身、≤100Wh、不可託運",
+      "detail": "10,000 mAh = 37Wh，安全。建議 1 人 1 顆，飯店白天充電。",
+      "priority": "must", "scope": "both", "weeksAhead": 1
+    },
+    {
+      "id": "chargers",
+      "category": "luggage",
+      "title": "充電線 + 多孔 USB 充電器",
+      "detail": "日本插座 A 型雙平腳，跟台灣相同，不需轉接頭。Lightning / USB-C 線各備 2 條。",
+      "priority": "must", "scope": "both", "weeksAhead": 1
+    },
+    {
+      "id": "meat-check",
+      "category": "luggage",
+      "title": "確認沒帶肉類製品",
+      "detail": "肉鬆、肉乾、含肉的泡麵調味包都禁止。誤帶會被沒收 + 罰款。",
+      "priority": "must", "scope": "both", "weeksAhead": 0
+    },
+    {
+      "id": "trash-bags",
+      "category": "luggage",
+      "title": "小垃圾袋幾個",
+      "detail": "日本街頭垃圾桶極少，垃圾自己帶回飯店。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 2
+    },
+    {
+      "id": "shopping-bag",
+      "category": "luggage",
+      "title": "可摺購物袋 1-2 個",
+      "detail": "日本超商塑膠袋 ¥3-5 / 個。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 2
+    },
+
+    {
+      "id": "save-osaka-office",
+      "category": "emergency",
+      "title": "存駐大阪辦事處電話",
+      "detail": "一般 06-6227-8623、急難救助專線（限緊急）090-8794-4568。地址：大阪市北区中之島 2-3-18 中之島フェスティバルタワー 17F。",
+      "priority": "must", "scope": "both", "weeksAhead": 4,
+      "link": "https://www.roc-taiwan.org/jposa/post/13.html", "linkLabel": "駐大阪辦事處"
+    },
+    {
+      "id": "save-mofa-hotline",
+      "category": "emergency",
+      "title": "存外交部全球免付費專線",
+      "detail": "日本撥：001-800-0885-0885（諧音「您幫幫我您幫幫我」）。限緊急。國內代撥（家人用）0800-085-095。",
+      "priority": "must", "scope": "both", "weeksAhead": 4
+    },
+    {
+      "id": "save-110",
+      "category": "emergency",
+      "title": "存日本緊急電話 110 / 119 / 118",
+      "detail": "110 警察（搶劫、車禍、糾紛）／119 消防救護（火災、急病）／118 海上保安（海上事故）。公共電話按紅鈕後免費撥。",
+      "priority": "must", "scope": "both", "weeksAhead": 4
+    },
+    {
+      "id": "emergency-card-paper",
+      "category": "emergency",
+      "title": "緊急聯絡紙卡放錢包",
+      "detail": "寫「我是 XXX，同行 OOO，請聯繫 +886-9XX-XXX-XXX」，意外昏迷時可救命。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 1
+    },
+    {
+      "id": "hotel-jp-screenshot",
+      "category": "emergency",
+      "title": "飯店日文地址截圖存相簿",
+      "detail": "計程車司機看不懂中文，秀截圖最快。",
+      "priority": "must", "scope": "both", "weeksAhead": 1
+    },
+
+    {
+      "id": "vjw-bookmark",
+      "category": "apps",
+      "title": "Visit Japan Web 加到主畫面",
+      "detail": "VJW 是網頁版 PWA，沒有 App。用 Safari 開官網 → 分享 → 加到主畫面。",
+      "priority": "must", "scope": "both", "weeksAhead": 1,
+      "link": "https://www.vjw.digital.go.jp/", "linkLabel": "VJW"
+    },
+    {
+      "id": "google-maps-offline",
+      "category": "apps",
+      "title": "Google Maps 離線地圖（大阪 / 京都 / 奈良）",
+      "detail": "在 Google Maps 搜尋「大阪市」→ 點 ⋯ → 下載離線地圖。需要連網確認交通即時狀況，但路線導航可離線。",
+      "priority": "must", "scope": "both", "weeksAhead": 1
+    },
+    {
+      "id": "translate-offline",
+      "category": "apps",
+      "title": "Google 翻譯下載日文離線包",
+      "detail": "鏡頭即時翻譯菜單神器。設定 → 離線翻譯 → 下載日文。",
+      "priority": "must", "scope": "both", "weeksAhead": 1
+    },
+    {
+      "id": "safety-tips",
+      "category": "apps",
+      "title": "防災 App：Safety Tips / NHK World",
+      "detail": "Safety Tips 是日本觀光廳官方，多語災害推播。8 月颱風季高峰，務必裝。",
+      "priority": "must", "scope": "both", "weeksAhead": 1
+    },
+    {
+      "id": "transit-app",
+      "category": "apps",
+      "title": "交通 App：Yahoo! 乘換案內 或 Japan Travel NAVITIME",
+      "detail": "Yahoo 乘換案內最準確；NAVITIME 含 JR / 私鐵 / 徒步整合。",
+      "priority": "must", "scope": "both", "weeksAhead": 1
+    },
+    {
+      "id": "tabelog",
+      "category": "apps",
+      "title": "食べログ Tabelog（餐廳評分）",
+      "detail": "3.5 以上就很不錯，3.8+ 排隊神店。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 1
+    },
+
+    {
+      "id": "obon-warning",
+      "category": "entry",
+      "title": "🚨 整段行程撞日本盂蘭盆節 Obon（8/13–16）",
+      "detail": "Obon 是日本最大返鄉週、新年級別。對你 7 天行程的具體影響：① 自由軒 / 北極星 等家族經營老店 8/13-15 約 30-50% 公休，事先打電話確認；② 跨城新幹線、近鐵指定席 1 個月前秒殺（8/13 下行、8/16 上行最瘋）；③ 京都 8/16 五山送り火 = Obon 最後一晚，市內交通管制；④ 飯店漲價 30-50%、住宿稅另計；⑤ USJ / 大阪城 等景點 8/13-15 人潮極多，要更早入場。建議：7 月中再確認所有訂位，並準備備案餐廳清單。",
+      "priority": "must", "scope": "both", "weeksAhead": 8,
+      "link": "https://gw-navi.com/traffic/obon-shinkansen-revenge-2026/",
+      "linkLabel": "Obon 新幹線指引"
+    },
+    {
+      "id": "obon-restaurant-prebooking",
+      "category": "entry",
+      "title": "預先確認 / 預訂 8/13-15 餐廳（Obon 期間）",
+      "detail": "Obon 期間家族老店常公休（自由軒、北極星、串炸店等）。建議事前：① 用 TableLog/食べログ 線上預訂、② 或請飯店打電話確認當日營業 + 訂位、③ 連鎖店（吉野家、一蘭、CoCo 壱、便利商店）較不會公休可當備案。",
+      "priority": "must", "scope": "both", "weeksAhead": 2
+    },
+    {
+      "id": "kyoto-lodging-tax",
+      "category": "money",
+      "title": "💴 京都住宿稅 2026/3 大幅漲價（每人每晚）",
+      "detail": "2026/3/1 起京都市住宿稅 5 級制：¥6,000 以下房 → ¥200/人晚、¥6,000-20k → ¥400、¥20k-50k → ¥1,000、¥50k-100k → ¥4,000（漲 4 倍）、¥100k+ → ¥10,000（漲 10 倍）。**訂房通常沒含、現場 check-in 付**。兩人若在京都過夜，預算多抓 ¥400-2,000。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 4,
+      "link": "https://www.city.kyoto.lg.jp/gyozai/page/0000345893.html",
+      "linkLabel": "京都市官網"
+    },
+    {
+      "id": "osaka-no-smoking-street",
+      "category": "entry",
+      "title": "🚭 大阪市 2025 起全域路上禁菸",
+      "detail": "2025/1/27 起大阪市全域（道路、廣場、公園）禁止吸菸，含電子菸、加熱菸；違反現場罰 ¥1,000。只能在指定吸菸所抽。即使不抽菸也要知道，避開二手菸。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 2,
+      "link": "https://www.city.osaka.lg.jp/kankyo/page/0000630108.html",
+      "linkLabel": "大阪市官網"
+    },
+    {
+      "id": "shrine-etiquette",
+      "category": "entry",
+      "title": "⛩ 神社參拜禮儀（你會去很多神社）",
+      "detail": "鳥居中央 = 神明走的路，**靠左或右側通過**，過鳥居前輕鞠躬。手水舍：左手→右手→漱口（水含左手、別嘴對杓）→再洗左手→直立杓沖洗杓柄。神社 = **二禮二拍手一禮**（賽錢→鞠躬 2 次→拍手 2 次→默念→再鞠躬 1 次）。佛寺（清水寺、東大寺）= 合掌即可，不拍手。伏見稲荷=神社、北野天滿宮=神社、東大寺=寺、清水寺=寺。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 1
+    },
+    {
+      "id": "escalator-rule",
+      "category": "entry",
+      "title": "🚇 大阪電扶梯規則（跟東京相反！）",
+      "detail": "大阪 = **右側站立、左側讓行**（跟東京、京都左立相反）。京都因外來客多採左立，跟東京一致。日本電梯協會自 2024 推「兩側站立」運動，部分縣已條例化。實務：不趕時間就乖乖站著別走，趕時間時跟在地人走（大阪左、京都右）。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 1
+    },
+    {
+      "id": "festival-planning",
+      "category": "entry",
+      "title": "🎆 規劃 8/16 京都五山送り火（限時！）",
+      "detail": "本次旅遊期間最大限定亮點！20:00 起整個京都夜空陸續浮現「大」「妙法」「船」「鳥居」五個火字、送祖靈回冥府。建議：8/16 整天排京都行程、晚上找鴨川堤防（賀茂大橋附近）觀賞，19:30 前要到位避開觀光人潮。可搭配嵐山燈籠流し（同晚）或前一晚 8/15 奈良大文字送り火。8/11-14 抵達當晚也可以去奈良燈花會（2 萬個蠟燭）。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 2
+    },
+    {
+      "id": "usj-express-strategy",
+      "category": "entry",
+      "title": "USJ 暑假 Obon 旺季策略（任天堂世界 + Donkey Kong 新區）",
+      "detail": "你的 USJ 日（8/13 三）撞 Obon **超級高峰**。重要：① **2026/1/5 起紙本整理券廢止**，任天堂世界 + Donkey Kong Country（2024/12 開幕新區）共用 **App 整理券**；② **出發前必裝 USJ 官方 App + 註冊帳號** — 8/13 開園衝任天堂入口、立刻在 App 抽整理券；③ Express Pass 4 ~ Donkey Kong 確約版浮動定價 ¥10,800-25,000/人（旺日偏高），出發前 2 週看官網；④ 提早 30 分到開園、預先研究園區地圖。",
+      "priority": "must", "scope": "both", "weeksAhead": 4,
+      "link": "https://www.usj.co.jp/web/ja/jp/enjoy/numbered-ticket/timed-entry-ticket",
+      "linkLabel": "USJ 整理券 App 化"
+    },
+    {
+      "id": "tax-refund-clarify",
+      "category": "money",
+      "title": "退稅實務（5,000 円 稅前 + 護照正本 + 同日可合算）",
+      "detail": "⚠ 重點：① 門檻 **¥5,000 稅前（税抜）**，不是稅後；② **同日 / 同店 / 同人 可累計**（一般物品+消耗品 2024 起也能合算）；③ **護照「正本」要遞給店員操作**（掃描登錄系統，不只是『出示』）；④ 消耗品（藥妝、零食）要封袋、30 天內出境不能拆；⑤ 你 8 月仍走舊制（店面直接免稅），2026/11/1 才改 Refund 制；網路懶人包別搞錯。",
+      "priority": "must", "scope": "both", "weeksAhead": 0
+    },
+    {
+      "id": "esim-plan-b",
+      "category": "comm",
+      "title": "eSIM Plan B：實體 SIM / WiFi 機備援",
+      "detail": "eSIM 偶有開通失敗、機型不支援、訊號弱問題。備援：關空第 1 航廈 1F 國際入境大廳 24h SoftBank Global Rental 可現場買 SIM（7 天 ¥3,500 起）或租 WiFi 機（¥600/日）— ATM 旁邊就有。先記下位置以防 eSIM 死。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 0,
+      "link": "https://www.kansai-airport.or.jp/tw/service/sim",
+      "linkLabel": "關空 SIM/WiFi"
+    },
+    {
+      "id": "typhoon-sop",
+      "category": "insurance",
+      "title": "颱風應變 SOP（8 月颱風季高峰）",
+      "detail": "班機延誤 / 取消：第一時間到航空公司櫃台索取「航班取消證明」（保險求償必備）。長榮退票免手續費、星宇可線上改期。旅遊不便險選含「班機延誤 4h+ 賠」+「行程取消（陸警可取消）」的方案 — 富邦、安達、新光較推薦。颱風發布時優先回飯店、避開河岸與低窪地。",
+      "priority": "must", "scope": "both", "weeksAhead": 4
+    },
+    {
+      "id": "contact-lens-limit",
+      "category": "health",
+      "title": "隱形眼鏡每度數限 60 片（2 個月份）",
+      "detail": "日本海關規定每人每度數最多 60 片日拋（=2 個月份），最多兩種度數一種品牌。保留原裝盒（含成分標籤）+ 處方箋影本以防抽查。藥水另計，屬醫藥外品。",
+      "priority": "must", "scope": "both", "weeksAhead": 1,
+      "link": "https://www.customs.go.jp/",
+      "linkLabel": "日本海關"
+    },
+    {
+      "id": "powerbank-rules-2pcs",
+      "category": "luggage",
+      "title": "行動電源新規：≤2 顆、單顆 ≤160Wh、不可頭頂行李櫃",
+      "detail": "日本國交省 2026/4/24 起新規：每人最多 2 顆、單顆 ≤160Wh（一般 10,000mAh 約 37Wh，OK）、**必須隨身**、機上不可使用、**必須放座位前方或腳邊**（不可放頭頂行李櫃）。輸出口要絕緣膠帶或原裝盒。",
+      "priority": "must", "scope": "both", "weeksAhead": 1
+    },
+    {
+      "id": "photo-backup",
+      "category": "apps",
+      "title": "拍照備份策略（避免行動數據爆量）",
+      "detail": "iPhone：設定 → Apple ID → iCloud → 照片 → **關閉「行動數據自動上傳」**，只 WiFi 自動備份。Google Photos：App 內備份 → 關閉「行動數據備份」。建議帶 64GB+ 手機，或加買 iCloud 50GB（NT$30/月）。每晚回飯店 WiFi 才同步。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 1
+    },
+    {
+      "id": "ime-translate",
+      "category": "apps",
+      "title": "iPhone 加日文輸入法 + 預載翻譯",
+      "detail": "iOS 設定 → 一般 → 鍵盤 → 加入「日文 - 假名 / 羅馬字」 — 點餐輸入店名很方便。建議裝 Google 翻譯（下載日文離線包 ~50MB）+「VoiceTra」（日本國立研究所製、語音對話翻譯）+「Yomiwa」（拍照識字 — 看招牌、藥妝品標籤超好用）。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 1,
+      "link": "https://voicetra.nict.go.jp/",
+      "linkLabel": "VoiceTra"
+    },
+    {
+      "id": "leftover-yen",
+      "category": "money",
+      "title": "回程剩餘日圓處理",
+      "detail": "選項：① 關空 ATM 旁外幣自動兌換機可換回台幣（匯率 -3%）；② 機場郵局「Pocket Change」自動機可換回現金 / 儲值到 Apple Pay / 悠遊卡 / Amazon 點數；③ Suica/ICOCA 餘額在 7-11、全家便利商店消費光；④ 留 ¥3,000-5,000 給下次旅遊或紀念。",
+      "priority": "recommended", "scope": "both", "weeksAhead": 0,
+      "link": "https://www.pocket-change.jp/",
+      "linkLabel": "Pocket Change"
+    },
+    {
+      "id": "couple-tripod",
+      "category": "luggage",
+      "title": "情侶合照裝備：小腳架 + 藍牙快門",
+      "detail": "情侶旅行請陌生人拍合照常失焦或角度怪。建議：① Manfrotto PIXI 桌上腳架（NT$1,200，可放在花見小路、千本鳥居小角落）；② 藍牙快門器（NT$200，遠端按拍）；③ 廣角夾鏡（拍清水寺、鳥居全景必備）。",
+      "priority": "optional", "scope": "both", "weeksAhead": 2
+    }
+  ]
+}

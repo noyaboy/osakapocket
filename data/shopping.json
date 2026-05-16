@@ -1,0 +1,45 @@
+{
+  "categories": [
+    { "id": "drug",     "label": "藥妝", "emoji": "💊" },
+    { "id": "snack",    "label": "零食", "emoji": "🍬" },
+    { "id": "tech",     "label": "電器 / 3C", "emoji": "📷" },
+    { "id": "kitchen",  "label": "廚房 / 雜貨", "emoji": "🍴" },
+    { "id": "souvenir", "label": "伴手禮", "emoji": "🎁" }
+  ],
+  "items": [
+    { "id": "eve",      "category": "drug", "name": "EVE 止痛藥", "where": "藥妝店", "price": "¥600-900", "note": "⚠ 注意成分 — 含偽麻黃鹼版本不能帶回台灣（會被海關沒收）。" },
+    { "id": "biofermin", "category": "drug", "name": "Biofermin 表飛鳴", "where": "藥妝店", "price": "¥1,500-2,500", "note": "日本最有名整腸藥，台灣版本不同。" },
+    { "id": "salonpas", "category": "drug", "name": "撒隆巴斯 痠痛貼布", "where": "藥妝店", "price": "¥500-1,500", "note": "USJ 走完一天必備。" },
+    { "id": "lulu",     "category": "drug", "name": "LULU 喉嚨噴霧 / 口含錠", "where": "藥妝店", "price": "¥600-1,000", "note": "夏天冷氣強易喉嚨痛。" },
+    { "id": "kobayashi-pads", "category": "drug", "name": "小林製藥 退熱貼", "where": "藥妝店", "price": "¥500-700", "note": "夏天中暑、發燒救命。" },
+    { "id": "rohto", "category": "drug", "name": "Rohto 樂敦眼藥水", "where": "藥妝店", "price": "¥500-900", "note": "⚠ 含類固醇版本不能帶回台灣。買無類固醇版（C-Cube 等）安全。" },
+    { "id": "kao-mask", "category": "drug", "name": "花王蒸氣眼罩", "where": "藥妝店、便利商店", "price": "¥800-1,400 / 12 入", "note": "搭飛機、舒緩眼睛。" },
+    { "id": "muji-skin", "category": "drug", "name": "無印良品化妝水", "where": "無印良品", "price": "¥1,500-2,500", "note": "敏感肌系列在台灣賣貴很多。" },
+    { "id": "shiseido-sunscreen", "category": "drug", "name": "資生堂 ANESSA 防曬", "where": "藥妝店", "price": "¥2,500-3,500", "note": "8 月大阪必備。買 60g 隨身、120g 託運。" },
+    { "id": "haruhada", "category": "drug", "name": "美妝小物（CANMAKE、KATE）", "where": "藥妝店", "price": "¥500-2,000", "note": "唇彩、修容、眉筆 — 台灣價的 6-7 折。" },
+
+    { "id": "kitkat", "category": "snack", "name": "KitKat 日本限定口味", "where": "便利商店、唐吉訶德", "price": "¥300-800", "note": "抹茶、櫻花、和三盆糖、酒香系列。" },
+    { "id": "tokyo-banana", "category": "snack", "name": "東京 / 大阪 Banana", "where": "車站、機場限定", "price": "¥1,000-1,800 / 盒", "note": "大阪也有版本「Osaka Banana」。" },
+    { "id": "shiroi-koibito", "category": "snack", "name": "白色戀人", "where": "百貨、機場", "price": "¥1,200-3,000", "note": "經典北海道伴手禮，大阪百貨地下街也有。" },
+    { "id": "letao", "category": "snack", "name": "LeTAO 雙層起司蛋糕", "where": "大丸百貨、阪急百貨地下街", "price": "¥1,728", "note": "冷藏保存 1 天 — 回國當天買、上飛機前冰著。" },
+    { "id": "calbee-jagariko", "category": "snack", "name": "Calbee Jagariko 薯條", "where": "便利商店", "price": "¥150-200", "note": "限定口味只在日本買得到。" },
+    { "id": "royce", "category": "snack", "name": "ROYCE 生巧克力", "where": "百貨、機場", "price": "¥800-1,500", "note": "夏天買要冰桶 / 保冷袋。" },
+    { "id": "konbini-pudding", "category": "snack", "name": "便利商店 限定布丁 / 蛋糕", "where": "7-11、Family Mart、Lawson", "price": "¥200-400", "note": "嗜甜必試。" },
+    { "id": "matcha-products", "category": "snack", "name": "京都抹茶系列", "where": "京都 itoyokan、伊藤久右衛門", "price": "¥500-2,000", "note": "去京都那天順手帶。" },
+
+    { "id": "carry-on", "category": "tech", "name": "Anker / 小米 行動電源", "where": "Bic Camera、Yodobashi", "price": "¥3,000-6,000", "note": "通常比台灣便宜。⚠ 100Wh 以下隨身，禁託運。" },
+    { "id": "headphone", "category": "tech", "name": "SONY 耳機 / Sony WF 系列", "where": "Yodobashi、Bic Camera", "price": "¥10,000-30,000", "note": "退稅後比台灣便宜 15-20%。" },
+    { "id": "camera", "category": "tech", "name": "Sony / Canon 相機 / 鏡頭", "where": "Yodobashi 梅田店", "price": "¥30,000+", "note": "退稅後比台灣便宜很多。但水貨保固台灣不認。" },
+    { "id": "muji-pen", "category": "tech", "name": "無印良品文具", "where": "無印良品", "price": "¥100-500", "note": "凝膠筆、筆記本、收納袋。輕薄好帶。" },
+
+    { "id": "kitchen-knife", "category": "kitchen", "name": "日本菜刀 (合羽橋)", "where": "東京合羽橋（大阪沒這條街）", "price": "¥5,000-30,000", "note": "本次不去東京就跳過。大阪買貴。" },
+    { "id": "donki-pots", "category": "kitchen", "name": "唐吉訶德 雜貨", "where": "唐吉訶德全店", "price": "¥100-2,000", "note": "鍋具、餐具、家用品。台灣價的 6-7 折。" },
+    { "id": "loft-organize", "category": "kitchen", "name": "LOFT / Tokyu Hands 收納袋 / 旅行包", "where": "梅田 LOFT、Tokyu Hands", "price": "¥500-3,000", "note": "壓縮袋、收納盒、旅行用品。" },
+
+    { "id": "yatsuhashi", "category": "souvenir", "name": "京都 八橋 (生 / 烤)", "where": "京都伴手禮店、京都車站", "price": "¥800-1,500", "note": "去京都那天買。生八橋是抹茶 / 季節限定口味多。" },
+    { "id": "akafuku", "category": "souvenir", "name": "赤福（伊勢名物）", "where": "京都車站、大阪百貨", "price": "¥800", "note": "甜紅豆麻糬，2-3 天賞味期。" },
+    { "id": "sake", "category": "souvenir", "name": "日本酒 / 清酒", "where": "Bic Camera、伊勢丹、機場免稅", "price": "¥1,500-5,000", "note": "⚠ 託運不能 > 5 公升，每人 1 公升免稅。" },
+    { "id": "japan-bag", "category": "souvenir", "name": "和風帆布袋 / 環保袋", "where": "無印、心齋橋小店、淺草式", "price": "¥500-2,000", "note": "輕便、好打包、伴手禮首選。" },
+    { "id": "fan", "category": "souvenir", "name": "日式扇子 / 摺扇", "where": "京都老店、伴手禮店", "price": "¥500-3,000", "note": "夏天用得到、回國當紀念。" }
+  ]
+}
