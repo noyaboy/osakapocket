@@ -1,5 +1,5 @@
 // OsakaPocket Service Worker — 離線快取
-const CACHE = 'osakapocket-v17';
+const CACHE = 'osakapocket-v18';
 const ASSETS = [
   './',
   './index.html',

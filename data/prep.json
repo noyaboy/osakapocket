@@ -54,17 +54,17 @@
       "id": "military-permit",
       "category": "gov",
       "title": "申請役男短期出境核准（線上）",
-      "detail": "出國前 1 個月內送件（建議 7/11–8/4 之間）。19–36 歲未役男必辦。3–5 個工作日核准。每次最長 4 個月，本次 7 天遠低於上限。",
+      "detail": "出國前 1 個月內送件（建議 7/11–8/4 之間）。19–36 歲未役男必辦。3–5 個工作日核准。每次最長 4 個月，本次 7 天遠低於上限。從內政部役政署官網入口 → 找「役男短期出境線上申請」。",
       "priority": "must", "scope": "male", "weeksAhead": 4,
-      "link": "https://www.ris.gov.tw/departure/", "linkLabel": "役政署線上系統"
+      "link": "https://www.ris.gov.tw/app/portal/2", "linkLabel": "內政部役政署"
     },
     {
       "id": "military-print",
       "category": "gov",
       "title": "列印核准通知單紙本 2 份",
-      "detail": "海關 100% 抽查，光手機螢幕不夠。一份夾護照、一份備用。",
+      "detail": "海關 100% 抽查，光手機螢幕不夠。一份夾護照、一份備用。從役政署官網「線上申辦」→ 列印通知單。",
       "priority": "must", "scope": "male", "weeksAhead": 1,
-      "link": "https://www.ris.gov.tw/military-abroadStudy/", "linkLabel": "通知單查詢列印"
+      "link": "https://www.ris.gov.tw/app/portal/2", "linkLabel": "內政部役政署"
     },
     {
       "id": "military-screenshot",

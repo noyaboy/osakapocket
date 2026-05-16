@@ -544,7 +544,7 @@ function saveShoppingBought() {
 
 // ===== Expenses (記帳) =====
 const EXPENSES_KEY = 'expenses.v1';
-const JPY_TWD_RATE = 0.21;  // 約值，可以未來連線抓即時匯率
+const JPY_TWD_RATE = 0.20;  // 2026/5 台銀現金約 0.1898 買 / 0.2026 賣，取中位 0.20
 async function loadExpenses() {
   state.expenses = (await dbGet(EXPENSES_KEY)) || [];
 }
