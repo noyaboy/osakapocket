@@ -46,6 +46,27 @@ function escapeHtml(s) {
   }[m]));
 }
 
+// ===== PWA installed mode detection + persistent storage request =====
+function isStandalone() {
+  return window.matchMedia('(display-mode: standalone)').matches
+      || window.navigator.standalone === true;
+}
+let _persistedFlag = null;
+async function requestPersistentStorage() {
+  if (!navigator.storage?.persist) return false;
+  try {
+    _persistedFlag = await navigator.storage.persist();
+    return _persistedFlag;
+  } catch { return false; }
+}
+async function isPersisted() {
+  if (_persistedFlag !== null) return _persistedFlag;
+  if (!navigator.storage?.persisted) return false;
+  try { _persistedFlag = await navigator.storage.persisted(); }
+  catch { _persistedFlag = false; }
+  return _persistedFlag;
+}
+
 // ===== Modal helpers (body scroll lock, bg tap, ESC, auto-focus, focus trap) =====
 const _modalStack = [];   // 多層 modal: ['day-edit', 'spot-picker']
 function modalOpen(name, customRoot) {
@@ -683,8 +704,20 @@ function renderHome() {
       </div>`;
   }
 
+  // 偵測是否安裝為 standalone PWA — 沒裝的話顯示醒目提示
+  const installBanner = !isStandalone() ? `
+    <div class="warn-card" style="background:linear-gradient(135deg,#fff4e0 0%,#ffe0b8 100%);border-color:#ffc890;color:#8b5a2b">
+      <strong style="color:#c47514">📲 請加到主畫面才能完整離線使用</strong><br>
+      你現在是在 Safari 內看這個 App。<strong>Safari 模式下資料 7 天會被 iOS 清掉</strong>。<br>
+      ・ 點 Safari 下方分享 ⤴ → 加入主畫面<br>
+      ・ 加完從桌面 🐙 圖示打開 — 變 standalone 模式<br>
+      ・ standalone 模式下 <strong>不受 7 天清除限制</strong>（WebKit 官方政策豁免）
+    </div>
+  ` : '';
+
   return `
     <div class="page">
+      ${installBanner}
       ${countdown}
       ${todayCard}
 
@@ -769,12 +802,13 @@ async function fillHomeActions() {
                   + (Object.keys(docs.passport || {}).length > 0 ? 1 : 0)
                   + ((docs.hotels || []).length > 0 ? 1 : 0)
                   + (Object.keys(docs.insurance || {}).length > 0 ? 1 : 0);
-  // 上次備份
+  // 上次備份 — standalone PWA 已豁免 7 天清除，僅在「未安裝」或「真的很久沒備份」時 urgent
   const lastBackup = localStorage.getItem('osakapocket.lastBackup');
   const daysSinceBackup = lastBackup
     ? Math.floor((Date.now() - new Date(lastBackup).getTime()) / 86400000)
     : null;
-  const backupUrgent = daysSinceBackup === null || daysSinceBackup >= 5;
+  const standaloneMode = isStandalone();
+  const backupUrgent = !standaloneMode || (daysSinceBackup !== null && daysSinceBackup >= 30);
 
   const cards = [
     {
@@ -805,9 +839,11 @@ async function fillHomeActions() {
       go: 'backup',
       icon: '💾',
       label: '備份',
-      sub: lastBackup
-        ? `上次 ${daysSinceBackup} 天前${backupUrgent ? '（iOS 7 天會清資料！）' : ''}`
-        : '⚠ 從未備份',
+      sub: !standaloneMode
+        ? '⚠ 未加到主畫面，資料 7 天會被清'
+        : lastBackup
+          ? `上次 ${daysSinceBackup} 天前`
+          : '建議出發前匯出一次（換手機保險）',
       count: '',
       urgent: backupUrgent,
     },
@@ -2270,15 +2306,23 @@ async function gatherStorageStats() {
 function renderBackup() {
   const last = localStorage.getItem(LAST_BACKUP_KEY);
   const lastTxt = last ? new Date(last).toLocaleString('zh-TW', { timeZone: TRIP_TZ }) : '從未匯出';
+  const standalone = isStandalone();
   return `
     <div class="page">
-      <div class="warn-card">
-        <strong>⚠ iPhone Safari 的 7 天規則</strong><br>
-        iOS 對 PWA 套用儲存清理：連續 <strong>7 天沒打開 App，所有本機資料會被清空</strong>。<br>
-        ・ 出發前務必匯出備份到 iCloud / 信箱<br>
-        ・ 旅途中至少每 5-6 天打開一次 App<br>
-        ・ 回國後可以匯入備份恢復
-      </div>
+      ${standalone ? `
+        <div class="card card-soft" style="background:#ebf7ed;border-color:#a8d5a8">
+          <h3 class="card-title" style="color:#2d7a2d">✓ Standalone PWA 模式</h3>
+          <p style="font-size:13px;color:var(--text-soft);line-height:1.6;margin:0">
+            你已加到主畫面、從圖示開啟。<strong>iOS WebKit 官方明確豁免 7 天清除規則</strong>，<br>
+            正常使用下資料不會丟。但仍建議定期匯出備份，以防：① 換手機 ② 手動清 Safari 資料 ③ 大型 iOS 升級。
+          </p>
+        </div>
+      ` : `
+        <div class="warn-card" style="background:linear-gradient(135deg,#fff4e0 0%,#ffe0b8 100%);border-color:#ffc890;color:#8b5a2b">
+          <strong style="color:#c47514">⚠ 你在 Safari 內看這個 App，未安裝</strong><br>
+          Safari 模式有 7 天清除規則。請先 <strong>分享 → 加入主畫面</strong>，從桌面圖示打開後再用此 App，資料才不會掉。
+        </div>
+      `}
 
       <div class="card">
         <h3 class="card-title">💾 匯出備份</h3>
@@ -2323,9 +2367,14 @@ async function refreshStorageStats() {
   const el = document.getElementById('storage-stats');
   if (!el) return;
   const s = await gatherStorageStats();
+  const persisted = await isPersisted();
+  const standalone = isStandalone();
   const fmt = b => b < 1024 ? `${b} B` : b < 1024*1024 ? `${(b/1024).toFixed(1)} KB` : `${(b/1024/1024).toFixed(1)} MB`;
+  const pctUsage = s.quota ? Math.round(s.usage / s.quota * 100) : null;
   el.innerHTML = `
     <dl class="backup-stats">
+      <dt>PWA 模式</dt><dd>${standalone ? '✓ Standalone（豁免 7 天清除）' : '⚠ Safari（建議加到主畫面）'}</dd>
+      <dt>持久儲存</dt><dd>${persisted ? '✓ 已授予（LRU eviction 最後才挑）' : '✗ 未授予'}</dd>
       <dt>卡夾資料</dt><dd>飯店 ${s.docs.hotels}・卡 ${s.docs.cards}・聯絡人 ${s.docs.contacts}</dd>
       <dt>附件</dt><dd>${s.attachCount} 個 ・ ${fmt(s.attachTotalSize)}</dd>
       <dt>旅前 To-Do 已勾</dt><dd>${s.prepDone}</dd>
@@ -2334,7 +2383,7 @@ async function refreshStorageStats() {
       <dt>必買勾選</dt><dd>${s.shoppingBought}</dd>
       <dt>日語收藏</dt><dd>${s.phraseFav}</dd>
       <dt>行程備註</dt><dd>${s.notes} 天有寫</dd>
-      ${s.quota ? `<dt>IndexedDB 配額</dt><dd>${fmt(s.usage)} / ${fmt(s.quota)}</dd>` : ''}
+      ${s.quota ? `<dt>儲存使用量</dt><dd>${fmt(s.usage)} / ${fmt(s.quota)}（${pctUsage}%）</dd>` : ''}
     </dl>
   `;
 }
@@ -2998,6 +3047,8 @@ function registerSW() {
     setupNav();
     navigate('home');
     registerSW();
+    // 試圖向 iOS 申請「持久儲存」— standalone PWA 較易拿到
+    requestPersistentStorage();
   } catch (err) {
     $('#app').innerHTML = `
       <div class="empty">
